@@ -1,0 +1,21 @@
+{
+    "git.ignoreLimitWarning": true,
+    "cSpell.words": [
+        "Atrributes",
+        "Babalola",
+        "codepaths",
+        "createadmin",
+        "createfood",
+        "foodid",
+        "pincode",
+        "superadmin",
+        "tsbuildinfo",
+        "uuidadmin",
+        "uuiduser",
+        "UUIDV",
+        "uuidvendor"
+    ],
+    "cSpell.enableFiletypes": [
+        "juliamarkdown"
+    ]
+}

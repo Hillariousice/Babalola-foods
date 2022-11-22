@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend"
+    "client": "npm start --prefix frontend",
+    "dev":"concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,8 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.7.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.5.0"
   }
 }

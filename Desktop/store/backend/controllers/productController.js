@@ -33,15 +33,15 @@ const updateProduct = asyncHandler(async(req, res) => {
         res.status(404)
         throw new Error('User not found')
     }
-    const user= await User.findById(req.user.id)
+   
     //check for user
-    if(!user){
+    if(!req.user){
         res.status(401)
         throw new Error('User not found')
     }
 
     //make sure logged in product matches user of product
-    if(product.user.toString() !== user.id){
+    if(product.user.toString() !== req.user.id){
         res.status(401)
         throw new Error('User not authorized')
     }
@@ -61,15 +61,15 @@ const deleteProduct = asyncHandler(async(req, res) => {
         throw new Error('User not found')
     }
 
-    const user= await User.findById(req.user.id)
+    
     //check for user
-    if(!user){
+    if(!req.user){
         res.status(401)
         throw new Error('User not found')
     }
 
     //make sure logged in product matches user of product
-    if(product.user.toString() !== user.id){
+    if(product.user.toString() !== req.user.id){
         res.status(401)
         throw new Error('User not authorized')
     }
